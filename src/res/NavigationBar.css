@@ -1,0 +1,55 @@
+/* Default CSS */
+li 
+{
+    display: inline;
+    list-style-type: none;
+    margin: 2vw 0;
+    font-size: 2vh;
+}
+a
+{ 
+    text-decoration: none;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1vw;
+}
+nav
+{
+    width: 100vw;
+    text-align: center;
+}
+body    
+    { margin: 0; }
+button
+    { display: none }
+ul
+{
+    margin: 0;
+    padding: 0;
+    display: inline;    
+}
+/* Mobile CSS */
+@media only screen and (max-width: 1500px)
+{
+    button
+    {
+        display: block;
+        padding: 2vw;
+        font-size: 3vh;
+        color: black;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    ul
+        { flex-direction: column; }
+    li
+    { 
+        display: none;
+        margin: 0; 
+    }
+    a
+        { display: block; }
+    nav
+        { text-align: left; }
+}
