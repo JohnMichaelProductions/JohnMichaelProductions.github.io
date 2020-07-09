@@ -2,21 +2,46 @@
 <html>
     <head>
         <title>John Michael Productions</title>
-        <link rel ="stylesheet" href="res/NavigationBar.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel ="stylesheet" href="res/Background.css">
     </head>
     <body>
         <header>
+            <!--Navigation Bar-->
+            <link rel ="stylesheet" href="res/NavigationBar.css">
             <nav>
                 <ul>
-                    <button>✖</button>
+                    <button>☰</button>
                     <li><a href = "XEngine/XEngine.html">X-ENGINE</a></li>
                     <li><a href = "BruhStudios/BruhStudios.html">BRUH STUDIOS</a></li>
                     <li><a href = "About/About.html">ABOUT</a></li>
                 </ul>
             </nav>
+            <!--Navigation Bar-->
         </header>
+        <div class = "XEngine">
+            <p class = "XEngine">X-Engine</p>
+        </div>
+        <!--Particle PlugIn-->
+        <canvas class="background"></canvas>
+        <script src="../Particle(PlugIn)/src/particles.js"></script>
+        <!--Particle PlugIn-->
     </body>
+    <style>
+        div.XEngine
+        { padding-top: 610px; }
+        p.XEngine 
+        {
+            font-family: monospace;
+            font-size: 50px;
+            color: #E0E0E0;
+            text-align: center;
+        }
+        p.button
+        {
+            display: block;
+        }
+        </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="res/Background.js"></script>
     <script src="res/NavigationBar.js"></script>
-
-</html>
+    </html>
