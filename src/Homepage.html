@@ -2,12 +2,11 @@
 <html>
     <head>
         <title>John Michael Productions</title>
-        <link rel ="stylesheet" href="res/Background.css">
     </head>
     <body>
         <header>
             <!--Navigation Bar-->
-            <link rel ="stylesheet" href="res/NavigationBar.css">
+            <link rel ="stylesheet" href="../src/CSS/NavigationBar.css">
             <nav>
                 <ul>
                     <button>☰</button>
@@ -19,31 +18,72 @@
             <!--Navigation Bar-->
         </header>
         <div class = "XEngine">
-            <h1 class = "XEngine">X</h1>
-            <p class = "XEngine">X-Engine</p>
+            <img src = "Assets/XEngineBackground.png" alt = "X-Engine Background" height="500"></img>
         </div>
         <!--Particle PlugIn-->
         <canvas class="background"></canvas>
-        <script src="../Particle(PlugIn)/src/particles.js"></script>
+        <script src="../Libraries/Particles/src/particles.js"></script>
         <!--Particle PlugIn-->
     </body>
     <style>
-        h1.XEngine
-        {
-            font-family: monospace;
-            font-size: 500px;
-            text-align: center;
-            color: #8A8383;
+        html, body 
+            { height: 100%; }
+        body 
+        { 
+            background-color: black;
         }
-        p.XEngine 
+        .background 
         {
-            font-family: monospace;
-            font-size: 50px;
-            color: #E0E0E0;
-            text-align: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
         }
-        </style>
+        nav {visibility: hidden;}
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="res/Background.js"></script>
+    <script>
+        window.onload = function() 
+        {
+            var particles = Particles.init
+            ({
+                selector: '.background',
+                color: ['#5798c9', '#57C975'],
+                connectParticles: true,
+                responsive: 
+                [{
+                    breakpoint: 1200,
+                    options: 
+                    {
+                        color: ['#5798c9', '#57C975'],
+                        maxParticles: 80,
+                        connectParticles: true
+                    }
+                }],
+                responsive: 
+                [{
+                    breakpoint: 960,
+                    options: 
+                    {
+                        color: ['#5798c9', '#57C975'],
+                        maxParticles: 40,
+                        connectParticles: true
+                    }
+                }],
+                responsive: 
+                [{
+                    breakpoint: 800,
+                    options: 
+                    {
+                        color: '#00C9B1',
+                        maxParticles: 80,
+                        connectParticles: false
+                    }
+                }],
+            });
+        }
+    </script>
     <script src="res/NavigationBar.js"></script>
-    </html>
+</html>

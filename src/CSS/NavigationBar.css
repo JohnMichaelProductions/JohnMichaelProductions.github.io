@@ -3,13 +3,13 @@ li
 {
     display: inline;
     list-style-type: none;
-    margin: 2vw 0 0;
+    margin: none;
     font-size: 2vh;
 }
 a
 { 
     text-decoration: none;
-    color: #E0E0E0;
+    color: Black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 1vw;
 }

@@ -6,6 +6,6 @@ $(document).ready(function()
             $("button").text("--");
         else
             $("button").text("☰");
-    $("li").toggle("fast");
+        $("li").toggle("fast");
     });
 });
