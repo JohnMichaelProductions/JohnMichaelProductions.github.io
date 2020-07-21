@@ -1,1 +1,0 @@
-<canvas class="background"></canvas>
