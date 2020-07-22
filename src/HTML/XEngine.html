@@ -2,6 +2,42 @@
 <html>
     <head>
         <title>X-Engine</title>
+        <link rel="stylesheet" href="../CSS/Navigation.css"/>
+        <link rel="stylesheet" href="../CSS/Main.css"/>
+        <link rel="stylesheet" href="../CSS/Footer.css"/>
+        <style>
+            /*Defualt*/
+            section
+            {
+                display: flex;
+            }
+            section div
+            {
+                background: gray;
+                width: 75%;
+            }
+            section.Intro div
+            {
+                background-image: url("../Assets/Images/XEngineIntro.png");
+                background-repeat: no-repeat;
+                height: 950px;
+                width: 100%;
+            }
+            section.LayerSystem div.Image
+            {
+                width: 75%;
+                height: 500px;
+            }
+            section.LayerSystem div.Image img
+            {
+                width: 75%;
+                height: 500px;
+            }
+            section.LayerSystem div.Description
+            {
+                width: 25%;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -13,73 +49,31 @@
                 </ul>
             </nav>
         </header>
-        <section class="Top">
-            <h1>Welcome to X-Engine</h1>
+        <section class="Intro">
+            <div>
+            </div>
         </section>
-        <section>
-            <div>a</div>
-            <div>b</div>
+        <section class="LayerSystem">
+            <div class="Image"><img src="../Assets/Images/LayerSystem.png"></div>
+            <div class="Description">
+                <h1>Layer System</h1>
+                <p>X-Engine is built with a layer system made to layer UI, the gameplay, and other elements.</p>
+            </div>
         </section>
-        <section>Second</section>
-        <footer>Footer</footer>
+        <section class="EventSystem">
+            <div>Desc</div>
+            <div>Image</div>
+        </section>
+        <section class="Renderering">
+            <div>Image</div>
+            <div>Desc</div>
+        </section>
+        <section class="OSSupport">
+            <div>Desc</div>
+            <div>Image</div>
+        </section>
+        <footer>
+            ok
+        </footer>
     </body>
-    <style>
-        /*Defualt*/
-        body
-        {
-            background: gray;
-            color: white;
-            font-family: monospace;
-            margin: 0;
-            padding: 0;
-        }
-        header
-        {
-            background: black;
-            padding: none;
-        }
-        section
-        {
-            background: white;
-            color: gray;
-            padding: 20px;
-            display: flex;
-            flex-direction: row;
-        }
-        footer
-        {
-            background: black;
-            padding: 10px 20px;
-        }
-        div
-        {
-            background: red;
-            margin: auto;
-            width: 100px;
-        }
-        /*Top Class*/
-        .Top section
-        {
-            align-items: center;
-        }
-        /*Navigation*/
-        ul
-        {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-            text-align: center;
-        }
-        li
-        {
-            display: inline-block;
-            margin: 0 20px 0 0;
-        }
-        a
-        {
-            font-size: 20px;
-            color: white;
-            text-decoration: none;
-        }
-    </style>
 </html>
