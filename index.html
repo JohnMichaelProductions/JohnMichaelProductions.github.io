@@ -2,14 +2,68 @@
 <html>
     <head>
         <title>John's Projects</title>
+        <version style="display: none;">0.1.4</version>
+        <link rel="shortcut icon" href="src/Assets/Icons/JohnMichaelProductionsEarlyLogo.ico">
     </head>
-    <body>
+    <body id="homepageBody">
         <h1>John's Projects</h1>
         <h2>Learn More</h2>
+        <div class="Buttons">
+            <a href="PurpleParty/" class="PurpleParty" style="color: #4e1577">Purple Party: Vision</a>
+            <br>
+            <a href="BusinessPlan/" class="BusinessPlan" style="color: #152577">Business Plan</a>
+            <br>
+            <a href="Blog/" class="Blog" style="color: #000000">Blog</a>
+        </div>
     </body>
     <style>
+        version
+        {
+
+        }
         body
             { text-align: center; }
+        div.Buttons a
+        {
+            display:inline-block;
+            padding:0.5em 3em;
+            border:0.16em solid #000000;
+            margin:0 0.3em 0.3em 0;
+            box-sizing: border-box;
+            text-decoration:none;
+            text-transform:uppercase;
+            font-family:'Roboto',sans-serif;
+            font-weight:400;
+            text-align:center;
+            transition: all 0.15s;
+        }
+        div.Buttons a:hover
+            { border-color:#00000064; }
+        div.Buttons a:active
+            { border-color:#00000064; }
+        @media all and (max-width:30em)
+        {
+            div.Buttons a
+            {
+                display:block; 
+                margin:0.4em auto;
+            }
+        }
     </style>
+    <script>
+        document.getElementById("homepageBody").style.opacity = 0;
+        var elem = document.getElementById("homepageBody");
+        var x = 0;
+        var textAnim = setInterval(function()
+        {
+            if(elem.style.opacity < 1)
+            {
+                elem.style.opacity = x + .01;
+                x += .01;
+                console.log(elem.style.opacity);
+            }
+            else
+                clearInterval(textAnim);
+        }, 20);
+    </script>
 </html>
-<!--<script>window.location.href = "BusinessPlan";</script>-->
