@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
+    <!--HEAD-->
     <head>
         <title>Business Plan</title>
         <link rel="stylesheet" href="../src/CSS/Navigation.css"/>
+        <link rel="icon" href="../src/Assets/Icons/Favicon.ico">
     </head>
+    <!--BODY-->
     <body>
         <header>
             <nav>
@@ -14,38 +17,41 @@
                 </ul>
             </nav>
         </header>
-        <h1>BUSINESS PLAN</h1>
-        <h1>⬤<br>◯<br>⬤<br>◯<br>⬤<br>◯<br></h1>
-        <h1>1. Mission/Company Purpose</h1>
-        <p>
-            The purpose of this company is to bring innovative products to the forefront of the technology industry.
-            The plan is to bring amazing affordable products to the general consumer, and at the same time push the limits of technology.
-        </p>
-        <h1>2. Market Analysis Vision</h1>
-        <p>
-            The company sees a unique opening within the smartphone industry, innovation is stagnating and pricing are rising.
-            The plan as of now is to come out with one different phone at three price points.
-            <br>
-            A base model for the lower income market($200 - $300), a mid-range model that would be on par with the flagship phones of today, and would be for the mass market($500 - $600), finally a performance model that will push the limits of what a smart phone is capable of($700 - $900).
-            <br>
-            This will undoubtedly shake up the smartphone industry with the price point and innovation of these phones.
-        </p>
-        <h1>3. Unique Management</h1>
-        <p>The Company will have unique management not seen before, more details will come with time.</p>
-        <h1>4. Unconventional Finance</h1>
-        <p>
-            The company will not be public, instead the company will take investments from private investors.
-            The company will not be easily influenced by inevstors, our vision will not be compromised and profits will come second.
-            As a result our funding will come in unconventional ways to be revealed with time.
-        </p>
-        <!--
-            <h1>5. Master Plan</h1>
-            <p><b>PRELUDE</b></p>
-            <p>The point of the master plan is to lay out important goals of the company, each of the parts will be important keystones of the company.</p>
-            <p><b>PART I</b></p>
-            <p>Funding... More details with time.</p>
-        -->
+        <div id="divI">
+            <h1>BUSINESS PLAN</h1>
+            <h1>⬤<br>◯<br>⬤<br>◯<br>⬤<br>◯<br></h1>
+            <h1>1. Mission/Company Purpose</h1>
+            <p>
+                The purpose of this company is to bring innovative products to the forefront of the technology industry.
+                The plan is to bring amazing affordable products to the general consumer, and at the same time push the limits of technology.
+            </p>
+            <h1>2. Market Analysis Vision</h1>
+            <p>
+                The company sees a unique opening within the smartphone industry, innovation is stagnating and pricing are rising.
+                The plan as of now is to come out with one different phone at three price points.
+                <br>
+                A base model for the lower income market($200 - $300), a mid-range model that would be on par with the flagship phones of today, and would be for the mass market($500 - $600), finally a performance model that will push the limits of what a smart phone is capable of($700 - $900).
+                <br>
+                This will undoubtedly shake up the smartphone industry with the price point and innovation of these phones.
+            </p>
+            <h1>3. Unique Management</h1>
+            <p>The Company will have unique management not seen before, more details will come with time.</p>
+            <h1>4. Unconventional Finance</h1>
+            <p>
+                The company will not be public, instead the company will take investments from private investors.
+                The company will not be easily influenced by inevstors, our vision will not be compromised and profits will come second.
+                As a result our funding will come in unconventional ways to be revealed with time.
+            </p>
+            <!--
+                <h1>5. Master Plan</h1>
+                <p><b>PRELUDE</b></p>
+                <p>The point of the master plan is to lay out important goals of the company, each of the parts will be important keystones of the company.</p>
+                <p><b>PART I</b></p>
+                <p>Funding... More details with time.</p>
+            -->
+        </div>
     </body>
+    <!--STYLE SHEET-->
     <style>
         body
             { text-align: center; }
@@ -58,4 +64,21 @@
         b
             { font-size: x-large; }
     </style>
+    <!--SCRIPT I-->
+    <script>
+        document.getElementById("divI").style.opacity = 0;
+        var elem = document.getElementById("divI");
+        var x = 0;
+        var textAnim = setInterval(function()
+        {
+            if(elem.style.opacity < 1)
+            {
+                elem.style.opacity = x + .01;
+                x += .01;
+                console.log(elem.style.opacity);
+            }
+            else
+                clearInterval(textAnim);
+        }, 20);
+    </script>
 </html>
